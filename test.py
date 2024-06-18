@@ -1,4 +1,5 @@
 from breaker.RoleManager import role_manager
+from breaker.ConfigManager import config_manager
 
 
 def test_role():

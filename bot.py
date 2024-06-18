@@ -10,7 +10,8 @@ def start_bot():
     driver = nonebot.get_driver()
     driver.register_adapter(Adapter)
 
-    nonebot.load_plugins("Plugins/")
+    nonebot.load_plugins("plugins/")
+    nonebot.load_plugins("plugins/core")
     nonebot.run()
 
 

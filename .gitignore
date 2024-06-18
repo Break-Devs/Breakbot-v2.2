@@ -1,2 +1,4 @@
 
 *.pyc
+database/roles.db
+config.toml
