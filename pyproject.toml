@@ -5,11 +5,11 @@ description = "Nextgen Break Bot."
 authors = ["Your Name <you@example.com>"]
 license = "GPLv3"
 readme = "README.md"
-packages = [{include = "breakbot_v2"}]
+packages = [{ include = "breaker" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-nonebot2 = {extras = ["fastapi"], version = "^2.3.1"}
+nonebot2 = { extras = ["fastapi"], version = "^2.3.1" }
 nonebot-adapter-onebot = "^2.4.3"
 nonebot-plugin-alconna = "^0.47.0"
 
