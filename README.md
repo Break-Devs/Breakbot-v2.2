@@ -1,6 +1,6 @@
 <div align="center">
     <img src="/static/img/dxdoublebreakstar.png" alt="logo" />
-    <h1 style="font-size:3em;">Breakbot v2<img src="static/img/dx.png" width="5%" /></h1>
+    <h1 style="font-size:3em;">Breakbot v2.2<img src="static/img/dx.png" width="5%" /></h1>
     <img src="https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=edb641" alt="Static Badge">
     <img src="https://img.shields.io/badge/Nonebot-2-green" alt="Static Badge">
     <img src="https://img.shields.io/badge/Dev-Alpha_2.2.0001-orange" alt="Static Badge">
