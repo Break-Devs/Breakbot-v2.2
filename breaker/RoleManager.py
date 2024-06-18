@@ -1,13 +1,14 @@
 import os
 import sqlite3
-from nonebot.log import logger
+from breaker.LoggerManager import logger
+from breaker.Colors import reset, grey
 
 
 class RoleManager:
     """用于和SQLite数据库进行交互来实现用户角色管理的权限管理器
     """
     def __init__(self) -> None:
-        logger.info("正在初始化角色管理模块...")
+        logger.info(f"{grey}正在初始化角色管理模块...{reset}")
         # 存储本地的数据库路径
         self.role_db_path = "./database/roles.db"
         

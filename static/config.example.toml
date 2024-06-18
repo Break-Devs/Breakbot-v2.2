@@ -9,6 +9,10 @@ version_name = "Mujirushi 1.0"
 # 自定义文本配置
 locale = "break"
 
+[onebot] # ! Onebot v11连接相关的配置
+onebot_host = "127.0.0.1"
+onebot_port = 8080
+
 [database] # ! 数据库相关的配置
 # 角色权限数据库的路径，一般不需要改动
 roles_db_name = "./database/roles.db"
