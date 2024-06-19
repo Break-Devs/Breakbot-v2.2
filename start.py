@@ -1,6 +1,5 @@
 # Break Bot的启动脚本
 # 自动初始化并启动各个功能
-import sys
 from breaker.Colors import gradient_text, reset, grey, light_cyan
 from breaker.LoggerManager import logger
 from breaker.ConfigManager import config_manager

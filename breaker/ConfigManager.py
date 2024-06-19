@@ -34,10 +34,9 @@ class DatabaseConf:
 @dataclass
 class NetworkConf:
     enable_mai_backend: bool
-    mai_backend_host: str
-    mai_backend_port: int
+    mai_backend_url: str
     mai_backend_token: str
-    enable_breal_api: bool
+    enable_break_api: bool
     break_api_host: str
     break_api_port: int
 
@@ -84,10 +83,9 @@ class ConfigManager:
                 )
                 network_conf = NetworkConf(
                     enable_mai_backend=config_data["network"]["enable_mai_backend"],
-                    mai_backend_host=config_data["network"]["mai_backend_host"],
-                    mai_backend_port=config_data["network"]["mai_backend_port"],
+                    mai_backend_url=config_data["network"]["mai_backend_url"],
                     mai_backend_token=config_data["network"]["mai_backend_token"],
-                    enable_breal_api=config_data["network"]["enable_breal_api"],
+                    enable_break_api=config_data["network"]["enable_break_api"],
                     break_api_host=config_data["network"]["break_api_host"],
                     break_api_port=config_data["network"]["break_api_port"]
                 )

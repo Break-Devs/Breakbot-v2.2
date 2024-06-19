@@ -27,13 +27,11 @@ mysql_password = ""
 [network] # ! 网络通信相关的配置
 # 是否连接启用mai.py后端的功能（以及相关的插件）？
 enable_mai_backend = false
-mai_backend_host = "127.0.0.1"
-mai_backend_port = 56001
+mai_backend_url = "http://127.0.0.1:56000"
 mai_backend_token = ""
 # 是否开启break API的Http通信功能？
 # 启动break API后会在本地开启一个网络服务端并允许你通过其进行联网通信。
 # 这个网络服务端一般用于同其他服务进行联动，如Minecraft服务器插件
-# 将端口设置为0之后可以直接在host中填入URL
-enable_breal_api = false
+enable_break_api = false
 break_api_host = "0.0.0.0"
 break_api_port = 56002

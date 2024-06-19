@@ -3,3 +3,6 @@
 database/roles.db
 config.toml
 poetry.lock
+.env
+poetry.lock
+poetry.lock
