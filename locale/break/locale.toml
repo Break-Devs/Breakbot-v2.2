@@ -1,0 +1,9 @@
+[core]
+NoPermissionMessage = "权限不足！"
+
+[role]
+roleUserGotMessage = "你当前属于这些角色组：{}"
+roleUserGotNoRoleMessage = "你当前不属于任何角色组！"
+roleOtherUserGotMessage = "{}当前属于这些角色组：{}"
+roleOtherUserGotNoRoleMessage = "{}当前不属于任何角色组！"
+AddRoleSuccessMessage = "添加角色组成功！"

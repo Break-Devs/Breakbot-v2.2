@@ -9,6 +9,7 @@ cfg = config_manager.get_cfg()
 
 class LocaleManager:
     locale: dict[str, dict]
+
     def __init__(self):
         logger.info(f"{grey}正在初始化文本管理模块...{reset}")
         self.locale_name = cfg.core.locale
@@ -31,6 +32,16 @@ class LocaleManager:
     def get_locale(self):
         return self.locale
 
-
+    def get(self, key: str, default: str = "出现了预料之外的错误，请联系管理员。") -> str:
+        keys = key.split('.')
+        value = self.locale
+        try:
+            for k in keys:
+                value = value.get(k)
+                if value is None:
+                    return default
+            return value if isinstance(value, str) else default
+        except Exception:
+            return default
+        
 locale_manager = LocaleManager()
-default_text = "出现了预料之外的错误，请联系管理员。"

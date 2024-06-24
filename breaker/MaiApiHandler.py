@@ -32,7 +32,7 @@ class MaiApiHandler:
         res = httpx.post(f"{self.host}/mai-api/identification", json=token_data)
         if res.status_code == 200:
             print(res.json())
-            salt_data: dict[str, str] = res.json()["result"]
+            salt_data: dict[str, str] = res.json()
             self.salt_1 = salt_data.get("salt_1", "")
             self.salt_2 = salt_data.get("salt_2", "")
             self.salt_3 = salt_data.get("salt_3", "")

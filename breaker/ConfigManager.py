@@ -13,6 +13,7 @@ class CoreConf:
     bot_name: str
     version_name: str
     locale: str
+    admin: list
 
 
 @dataclass
@@ -67,7 +68,8 @@ class ConfigManager:
                 core_conf = CoreConf(
                     bot_name=config_data["core"]["bot_name"],
                     version_name=config_data["core"]["version_name"],
-                    locale=config_data["core"]["locale"]
+                    locale=config_data["core"]["locale"],
+                    admin=config_data["core"]["admin"]
                 )
                 onebot_conf = OnebotConf(
                     onebot_host=config_data["onebot"]["onebot_host"],

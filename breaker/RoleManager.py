@@ -2,12 +2,15 @@ import os
 import sqlite3
 from breaker.LoggerManager import logger
 from breaker.Colors import reset, grey
+from breaker.ConfigManager import config_manager
 
 
 class RoleManager:
     """用于和SQLite数据库进行交互来实现用户角色管理的权限管理器
     """
     def __init__(self) -> None:
+        config = config_manager.get_cfg()
+        
         logger.info(f"{grey}正在初始化角色管理模块...{reset}")
         # 存储本地的数据库路径
         self.role_db_path = "./database/roles.db"
@@ -16,6 +19,11 @@ class RoleManager:
         if not os.path.exists("./database/roles.db"):
             logger.warning("未找到roles.db数据库文件，将新建数据库连接。")
             self.init_roles_db()
+        
+        # 初始化admin权限
+        admin_list = config.core.admin
+        for admin in admin_list:
+            self.add_role(admin, "admin")
     
     def init_roles_db(self):
         """初始化一个roles数据库

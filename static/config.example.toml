@@ -8,6 +8,8 @@ bot_name = "Break Bot"
 version_name = "Mujirushi 1.0"
 # 自定义文本配置
 locale = "break"
+# 初始admin
+admin = []
 
 [onebot] # ! Onebot v11连接相关的配置
 onebot_host = "127.0.0.1"
